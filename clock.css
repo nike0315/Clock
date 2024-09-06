@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing:border-box;
+    font-family:sans-serif;
+    color:#ffffff;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color:  rgb(49, 51, 49);
+    border: 2px solid; 
+    box-shadow: 5px 5px 50px 50px red;
+    animation: animateBg 5s linear infinite;
+    position: relative;
+
+}
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+.clock ::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    z-index: 2;
+
+}
+.hand{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
+    
+    
+}
+.hour-hand{
+    height: 6px;
+    width: 80px;
+    margin-left: 66px;
+    /* border-top-left-radius: 20px; */
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background: #ffffff;
+}
+.min-hand{
+    height: 3px;
+    width: 100px;
+    margin-left: 44px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 50px;
+    background: #ffffff;
+}
+.sec-hand{
+    height: 2px;
+    width: 120px;
+    margin-left: 25px;
+    background-color: red;
+}
+.number {
+    position: absolute;
+    font-size: 24px;
+    transform: translate(-50%, -50%);
+}
+
+.number1 {
+    top: 18%; left: 78%;
+ }
+.number2 { 
+    top: 35%; left: 92%;
+ }
+.number3 { 
+    top: 56%; left: 97%; 
+}
+.number4{
+     top: 75%; right: 7%;
+     }
+.number5 {
+     top: 90%; left: 70%;
+     }
+.number6 {
+     top: 95%; left: 50%;
+     }
+.number7 {
+     top: 90%; left: 28%;
+     }
+.number8 { 
+    top: 75%; left: 11%;
+ }
+.number9{ 
+    top: 56%; left: 3%;
+ }
+.number10 {
+     top: 35%; left: 8%;
+     }
+.number11{
+     top: 18%; left: 22%; 
+    }
+.number12 {
+     top: 10%; left: 50%;
+     }
+     .tika{
+        background-color: gray;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        margin-left: 136px;
+        margin-top: 140px;
+        border: 1px solid;
+     }
